@@ -1,0 +1,29 @@
+using System;
+//Console.WriteLine("Olá mundo!");
+
+/*Algoritmo 3: cálculo de salário com comissão
+ - Dados do salário fixo e o valor total das vendas efetuadas por um 
+   vendeor 
+ - sabendo que ele recebe 5% de comissão obre o valor total de 
+   vendass até R$ 2.000,00 e mais 10% sobre do que ultrapassar esse
+   valor
+ - exibir média
+ - calcular e exibir seu salário total
+*/
+
+decimal salarioFixo = 3000;
+decimal totalVendas = 3000;
+
+decimal comissao = 0;
+
+if (totalVendas > 2000)
+{
+    comissao = (totalVendas - 2000) * 0.1m; 
+    comissao += (2000 * 0.05m);
+}
+else
+{
+   comissao = totalVendas * 0.05m;
+}
+
+Console.WriteLine($"O salário totral é: {comissao + salarioFixo}");
